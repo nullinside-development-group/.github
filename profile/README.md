@@ -6,7 +6,7 @@ applications.
 <!-- TOC -->
 ## Table of Contents
 * [Site](#site)
-* [Code Bases](#code-bases)
+* [Codebases](#codebases)
 * [CICD](#cicd)
   * [Pull Request Testing](#pull-request-testing)
   * [Code Building](#code-building)
@@ -33,7 +33,7 @@ flowchart LR
     end
 ```
 
-## Code Bases
+## Codebases
 
 1. **Templates:** Templates used when creating new git repos to create boilerplate code for applications.
    * [nullinside-template-desktop-gui](https://github.com/nullinside-development-group/nullinside-template-desktop-gui): A
