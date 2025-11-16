@@ -51,8 +51,10 @@ flowchart LR
 3. **Ancillary:** The ancillary applications that support the site or its sister deliverables.
    * [nullinside-site-monitor](https://github.com/nullinside-development-group/nullinside-site-monitor): A desktop
      application that monitors the site and its microservices to ensure they are online.
-   * [nullinside-cicd-github](https://github.com/nullinside-development-group/nullinside-cicd-github): Automation for
-     dealing with missing functionality from out-of-the-box GitHub.   
+   * [nullinside-cicd-github](https://github.com/development-group/nullinside-cicd-github): Automation for
+     dealing with missing functionality from out-of-the-box GitHub.
+   * [nullinside-twitch-streaming-tools](https://github.com/development-group/nullinside-twitch-streaming-tools): 
+     A desktop application with tools for twitch streamers.
 
 ## CICD
 
@@ -68,10 +70,10 @@ flowchart LR
     a3-->|Get Work|API
     a4-->|Get Work|API
     subgraph Web Server - Docker
-        a1[<a href='https://github.com/ProgrammingByPermutation/scripts/tree/main/github-runner'>docker-build-agent</a>]
-        a2[<a href='https://github.com/ProgrammingByPermutation/scripts/tree/main/github-runner'>docker-build-agent</a>]
-        a3[<a href='https://github.com/ProgrammingByPermutation/scripts/tree/main/github-runner'>docker-build-agent</a>]
-        a4[<a href='https://github.com/ProgrammingByPermutation/scripts/tree/main/github-runner'>docker-build-agent</a>]
+        a1[<a href='https://github.com/ProgrammingByPermutation/scripts/tree/main/github-runner'>github-runner</a>]
+        a2[<a href='https://github.com/ProgrammingByPermutation/scripts/tree/main/github-runner'>github-runner</a>]
+        a3[<a href='https://github.com/ProgrammingByPermutation/scripts/tree/main/github-runner'>github-runner</a>]
+        a4[<a href='https://github.com/ProgrammingByPermutation/scripts/tree/main/github-runner'>github-runner</a>]
     end
     subgraph GitHub
         API
