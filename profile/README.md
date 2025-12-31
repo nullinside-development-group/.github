@@ -4,15 +4,16 @@ This organization is primarily responsible for the code required to run https://
 applications.
 
 <!-- TOC -->
-## Table of Contents
+* [nullinside-development-group](#nullinside-development-group)
 * [Site](#site)
 * [Codebases](#codebases)
 * [CICD](#cicd)
   * [Pull Request Testing](#pull-request-testing)
   * [Code Building](#code-building)
+* [fail2ban](#fail2ban)
 <!-- TOC -->
 
-## Site
+# Site
 
 The DNS for [nullinside.com](https://nullinside.com) points to the address of the web server hosting the site and
 its microservices. The NGINX server configured in the [nullinside-ui](https://github.com/nullinside-development-group/nullinside-ui)
@@ -21,7 +22,7 @@ project listens for all incoming web requests and routes to individual microserv
 for generating the `index.html` file for the site.
 
 The site hosts "proof of ownership" files at [https://nullinside.com/.wellknown/acme-challenge](https://github.com/nullinside-development-group/nullinside-ui/tree/main/nginx/filesystem/usr/share/nginx/html/.well-known/acme-challenge)
-for its site certificate provided by [Lets Encrypt](https://letsencrypt.org/).
+for its site certificate provided by [Let's Encrypt](https://letsencrypt.org/).
 
 ```mermaid
 flowchart LR
@@ -33,11 +34,11 @@ flowchart LR
     end
 ```
 
-## Codebases
+# Codebases
 
 1. **Templates:** Templates used when creating new git repos to create boilerplate code for applications.
    * [nullinside-template-desktop-gui](https://github.com/nullinside-development-group/nullinside-template-desktop-gui): A
-     standard desktop application written in C# using Avalonia. Deploys application as a GitHub release. Includes code
+     standard desktop application written in C# using Avalonia. Deploys an application as a GitHub release. Includes code
      for checking for new releases of the application. 
 2. **Website:** The codebases that explicitly support HTTP responses for (nullinside.com)[https://nullinside.com].
    * [nullinside-ui](https://github.com/nullinside-development-group/nullinside-ui): The frontend website UI. It also
@@ -56,11 +57,11 @@ flowchart LR
    * [nullinside-twitch-streaming-tools](https://github.com/development-group/nullinside-twitch-streaming-tools): 
      A desktop application with tools for twitch streamers.
 
-## CICD
+# CICD
 
-### Pull Request Testing
+## Pull Request Testing
 
-All pull requests are tested prior to be merged using GitHub actions that run on self-hosted runners. These checks,
+All pull requests are tested prior to being merged using GitHub actions that run on self-hosted runners. These checks,
 where possible, include CodeQL in addition to common sense sanity tests on the proposed code.
 
 ```mermaid
@@ -80,7 +81,7 @@ flowchart LR
     end
 ```
 
-### Code Building
+## Code Building
 
 Code is built on Jenkins using self-hosted runners. The jenkins instance has two publicly exposed endpoints that ingest
 JSON data indicating when updates are made to the GitHub codebase. Updates to each codebase's `main` branch
@@ -105,3 +106,9 @@ flowchart LR
         API
     end
 ```
+
+# fail2ban
+
+fail2ban is used to monitor the NGINX logs and block IP addresses violating the site's security policy.
+
+An example of how to set up fail2ban: [https://github.com/ProgrammingByPermutation/scripts/tree/main/fail2ban](https://github.com/ProgrammingByPermutation/scripts/tree/main/fail2ban) 
