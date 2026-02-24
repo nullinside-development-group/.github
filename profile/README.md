@@ -52,10 +52,15 @@ flowchart LR
 3. **Ancillary:** The ancillary applications that support the site or its sister deliverables.
    * [nullinside-site-monitor](https://github.com/nullinside-development-group/nullinside-site-monitor): A desktop
      application that monitors the site and its microservices to ensure they are online.
-   * [nullinside-cicd-github](https://github.com/development-group/nullinside-cicd-github): Automation for
+   * [nullinside-cicd-github](https://github.com/nullinside-development-group/nullinside-cicd-github): Automation for
      dealing with missing functionality from out-of-the-box GitHub.
-   * [nullinside-twitch-streaming-tools](https://github.com/development-group/nullinside-twitch-streaming-tools): 
+   * [nullinside-twitch-streaming-tools](https://github.com/nullinside-development-group/nullinside-twitch-streaming-tools): 
      A desktop application with tools for twitch streamers.
+   * [nullinside-grafana](https://github.com/nullinside-development-group/nullinside-grafana): The configuration for the internal grafana dashboards which includes this loki middleware for gathering logs from microservices.
+   * [.github](https://github.com/nullinside-development-group/.github): The site you're reading right now. :)
+4. **3rd Party:** Code from 3rd party code-bases that have been modified prior to integration.
+   * [mysql-connector-net](https://github.com/nullinside-development-group/mysql-connector-net): A fork of the official MySQL .NET connector with bug fixes that are not yet available upstream.
+   * [octokit.graphql.net](https://github.com/nullinside-development-group/octokit.graphql.net): A fork of the Octokit .NET GraphQL client with bug fixes that may never be available upstream (the maintainers appear to have abandoned the project).
 
 # CICD
 
