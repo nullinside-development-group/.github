@@ -4,7 +4,6 @@ This organization is primarily responsible for the code required to run https://
 applications.
 
 <!-- TOC -->
-* [nullinside-development-group](#nullinside-development-group)
 * [Site](#site)
 * [Codebases](#codebases)
 * [CICD](#cicd)
